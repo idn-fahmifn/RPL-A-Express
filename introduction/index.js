@@ -10,3 +10,6 @@ app.get('/', (req, res) => {
 app.listen(port, function(){
     console.log(`Server berjalan di localhost ${port}`)
 })
+
+
+// express, body parser, dotenv, nodemon

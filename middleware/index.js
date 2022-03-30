@@ -9,7 +9,10 @@ const middlewareBody = require("./middlewares/body");
 app.use('/',bodyParser.json(), middlewareHeader);
 
 //middleware dengan method POST
-app.post('/',bodyParser.urlencoded({extended:true}), middlewareBody);
+app.post('/',bodyParser.urlencoded({extended:true}), middlewareBody, (req, res) => {
+    res.send(req.body);
+})
+
 
 
 // run server
